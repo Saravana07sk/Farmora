@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# MongoDB local data
+/data/db/
+/data/mongod.log
+
+# Runtime uploads and logs
+server/uploads/*
+!server/uploads/.gitkeep
+*.log
+
+# Build and tool caches
+dist/
+build/
+.vite/
+.cache/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

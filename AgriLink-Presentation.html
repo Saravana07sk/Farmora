@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AgriLink Project Presentation</title>
+<style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: #17342a; background: #edf3ee; }
+.slide { width: 210mm; min-height: 297mm; padding: 24mm 22mm 18mm; page-break-after: always; position: relative; background: #fff; }
+.slide:last-child { page-break-after: auto; }
+.cover { background: #17342a; color: #fff; display: flex; flex-direction: column; justify-content: center; }
+.cover h1 { font-size: 46pt; margin: 0 0 8mm; color: #d8ef9d; letter-spacing: 1px; }
+.cover h2 { font-size: 22pt; font-weight: 400; margin: 0 0 24mm; color: #f4f7ed; }
+.cover .tag { border-left: 5px solid #e7b85c; padding-left: 12px; font-size: 14pt; }
+h1 { font-size: 27pt; color: #17342a; margin: 0 0 11mm; border-bottom: 3px solid #e7b85c; padding-bottom: 4mm; }
+h2 { font-size: 17pt; color: #28704d; margin: 8mm 0 4mm; }
+h3 { font-size: 13pt; color: #17342a; margin: 5mm 0 2mm; }
+p, li { font-size: 12pt; line-height: 1.55; }
+ul { margin-top: 2mm; }
+li { margin: 2mm 0; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9mm; }
+.panel { background: #f1f6ef; border-left: 4px solid #56a66d; padding: 5mm; }
+.metric { background: #fff7e2; border: 1px solid #e7b85c; padding: 5mm; margin: 4mm 0; }
+code, .code { font-family: Consolas, monospace; background: #edf3ee; padding: 2px 5px; }
+pre { background: #17342a; color: #f4f7ed; padding: 6mm; font-size: 10pt; line-height: 1.5; white-space: pre-wrap; }
+table { width: 100%; border-collapse: collapse; margin-top: 4mm; font-size: 10.5pt; }
+th { background: #28704d; color: white; text-align: left; }
+th, td { padding: 3mm; border: 1px solid #c8d8cc; }
+.footer { position: absolute; bottom: 9mm; left: 22mm; right: 22mm; display: flex; justify-content: space-between; font-size: 9pt; color: #648070; }
+.big { font-size: 18pt; line-height: 1.5; }
+.center { text-align: center; }
+</style>
+</head>
+<body>
+<section class="slide cover">
+  <div class="tag">Full-Stack Agricultural Marketplace</div>
+  <h1>AgriLink</h1>
+  <h2>Connecting Farms Directly to Markets</h2>
+  <p class="big">A digital platform that connects verified farmers with buyers, improves price transparency, and manages the complete marketplace workflow.</p>
+  <p>Project Presentation</p>
+</section>
+
+<section class="slide">
+<h1>1. Problem Statement</h1>
+<div class="grid">
+<div class="panel"><h2>Challenges for Farmers</h2><ul><li>Dependence on intermediaries</li><li>Unstable and unclear pricing</li><li>Difficulty reaching direct buyers</li><li>Limited digital inventory tools</li></ul></div>
+<div class="panel"><h2>Challenges for Buyers</h2><ul><li>Limited information about product origin</li><li>Inconsistent quality and availability</li><li>Hidden or unclear charges</li><li>Difficulty finding trusted farmers</li></ul></div>
+</div>
+<p class="big">AgriLink addresses these problems with one transparent, role-based online marketplace.</p>
+<div class="footer"><span>AgriLink</span><span>01</span></div>
+</section>
+
+<section class="slide">
+<h1>2. Proposed Solution</h1>
+<ul>
+<li>Farmers create and manage produce listings.</li>
+<li>Buyers browse products and place orders directly.</li>
+<li>Farmer verification increases trust on the platform.</li>
+<li>Inventory, order status, pricing, and analytics are managed digitally.</li>
+<li>Administrators moderate users and marketplace content.</li>
+</ul>
+<h2>Project Objectives</h2>
+<div class="grid"><div class="metric">Connect farmers directly with customers.</div><div class="metric">Improve farmer earnings and market access.</div><div class="metric">Provide transparent pricing and secure ordering.</div><div class="metric">Support data-driven marketplace decisions.</div></div>
+<div class="footer"><span>AgriLink</span><span>02</span></div>
+</section>
+
+<section class="slide">
+<h1>3. User Roles</h1>
+<div class="grid">
+<div class="panel"><h2>Farmer</h2><ul><li>Manage produce listings</li><li>Upload verification documents</li><li>Control inventory and prices</li><li>Process orders</li><li>View revenue analytics</li></ul></div>
+<div class="panel"><h2>Buyer</h2><ul><li>Search and filter products</li><li>View verified farmers</li><li>Manage cart and checkout</li><li>Track orders</li><li>Submit reviews</li></ul></div>
+<div class="panel"><h2>Administrator</h2><ul><li>Review farmer verification</li><li>Manage users</li><li>Moderate listings</li><li>View GMV and commissions</li><li>Monitor audit logs</li></ul></div>
+</div>
+<div class="footer"><span>AgriLink</span><span>03</span></div>
+</section>
+
+<section class="slide">
+<h1>4. Main Features</h1>
+<h2>Marketplace</h2><p>Search, category, price, location, quality-grade, farming-method, and verified-farmer filters.</p>
+<h2>Produce Management</h2><p>Product name, category, price, unit, quantity, minimum order quantity, quality grade, farming method, location, and images.</p>
+<h2>Order Fulfillment</h2>
+<pre>PLACED -> CONFIRMED -> PROCESSING -> READY_FOR_DELIVERY
+       -> OUT_FOR_DELIVERY -> DELIVERED</pre>
+<h2>Analytics</h2><p>Farmers can view sales performance, while administrators can view marketplace GMV, platform commissions, active listings, and category statistics.</p>
+<div class="footer"><span>AgriLink</span><span>04</span></div>
+</section>
+
+<section class="slide">
+<h1>5. Transparent Pricing</h1>
+<p class="big">The buyer sees the complete price before placing an order.</p>
+<div class="metric center"><p class="big">Total Payable = Produce Subtotal + Platform Fee + Delivery Fee</p></div>
+<h2>Example</h2>
+<table><tr><th>Component</th><th>Amount</th></tr><tr><td>Produce subtotal</td><td>Rs. 1,000</td></tr><tr><td>Platform fee: 3%</td><td>Rs. 30</td></tr><tr><td>Delivery fee</td><td>Rs. 70</td></tr><tr><th>Total payable</th><th>Rs. 1,100</th></tr></table>
+<p>This pricing model reduces confusion and builds trust between buyers and the platform.</p>
+<div class="footer"><span>AgriLink</span><span>05</span></div>
+</section>
+
+<section class="slide">
+<h1>6. Technology Stack</h1>
+<div class="grid">
+<div class="panel"><h2>Frontend</h2><ul><li>React 18</li><li>Vite</li><li>React Router</li><li>Tailwind CSS</li><li>Axios</li><li>Recharts and Framer Motion</li></ul></div>
+<div class="panel"><h2>Backend</h2><ul><li>Node.js</li><li>Express.js</li><li>Mongoose</li><li>JWT authentication</li><li>bcryptjs</li><li>Helmet and rate limiting</li></ul></div>
+<div class="panel"><h2>Database</h2><ul><li>MongoDB</li><li>User and role data</li><li>Products and inventory</li><li>Orders and reviews</li><li>Notifications and audit logs</li></ul></div>
+<div class="panel"><h2>Development</h2><ul><li>REST API architecture</li><li>Environment configuration</li><li>Local development servers</li><li>Seeded demo accounts</li></ul></div>
+</div>
+<div class="footer"><span>AgriLink</span><span>06</span></div>
+</section>
+
+<section class="slide">
+<h1>7. System Architecture</h1>
+<pre>Buyer / Farmer / Administrator
+              |
+       React Frontend
+              |
+       Express REST API
+              |
+ Authentication and Authorization
+              |
+ Controllers and Business Logic
+              |
+       Mongoose Models
+              |
+       MongoDB Database</pre>
+<p>The frontend sends requests to the backend. The backend validates permissions, applies marketplace rules, and reads or writes data in MongoDB.</p>
+<h2>Running Services</h2><p>Frontend: <code>http://localhost:5173</code><br>Backend: <code>http://localhost:5000</code><br>Database: <code>mongodb://127.0.0.1:27017/agrilink</code></p>
+<div class="footer"><span>AgriLink</span><span>07</span></div>
+</section>
+
+<section class="slide">
+<h1>8. Backend API</h1>
+<table><tr><th>Method</th><th>Endpoint</th><th>Purpose</th></tr><tr><td>POST</td><td>/api/auth/register</td><td>Register a user</td></tr><tr><td>POST</td><td>/api/auth/login</td><td>Authenticate a user</td></tr><tr><td>GET</td><td>/api/products</td><td>Browse and filter products</td></tr><tr><td>POST</td><td>/api/products</td><td>Create a product listing</td></tr><tr><td>GET</td><td>/api/cart</td><td>View the buyer cart</td></tr><tr><td>POST</td><td>/api/orders</td><td>Place an order</td></tr><tr><td>PATCH</td><td>/api/orders/:id/status</td><td>Update order status</td></tr><tr><td>GET</td><td>/api/farmer/analytics</td><td>View farmer analytics</td></tr><tr><td>GET</td><td>/api/admin/analytics</td><td>View platform analytics</td></tr></table>
+<div class="footer"><span>AgriLink</span><span>08</span></div>
+</section>
+
+<section class="slide">
+<h1>9. Database Design</h1>
+<div class="grid"><div class="panel"><h2>Collections</h2><ul><li>Users</li><li>Products</li><li>Orders</li><li>Cart</li><li>Reviews</li><li>Notifications</li><li>Audit logs</li></ul></div><div class="panel"><h2>Relationships</h2><ul><li>A farmer owns product listings.</li><li>A buyer creates orders.</li><li>Orders contain product references.</li><li>Buyers submit reviews.</li><li>Important actions create audit records.</li></ul></div></div>
+<h2>Live Connection</h2><p>The application connects through the server environment variable:</p><pre>MONGODB_URI=mongodb://127.0.0.1:27017/agrilink</pre><p>The products API has been verified and returns MongoDB-backed product data.</p>
+<div class="footer"><span>AgriLink</span><span>09</span></div>
+</section>
+
+<section class="slide">
+<h1>10. Security</h1>
+<ul><li>JWT-based authentication</li><li>Password hashing with bcryptjs</li><li>Role-based authorization</li><li>Protected farmer, buyer, and admin routes</li><li>Helmet security headers</li><li>API rate limiting</li><li>Input and request validation</li><li>Stock and minimum-order validation</li><li>Audit logging for important actions</li></ul>
+<h2>Why It Matters</h2><p>These controls protect user accounts, prevent unauthorized actions, and help maintain reliable marketplace operations.</p>
+<div class="footer"><span>AgriLink</span><span>10</span></div>
+</section>
+
+<section class="slide">
+<h1>11. Live Demonstration</h1>
+<h2>Buyer Demo</h2><p>Log in, search products, apply filters, add an item to the cart, review the price breakdown, place an order, and track its status.</p>
+<h2>Farmer Demo</h2><p>Log in, create or edit a listing, update stock, view incoming orders, change an order status, and review analytics.</p>
+<h2>Administrator Demo</h2><p>Log in, review marketplace metrics, approve a farmer, manage users, moderate listings, and inspect audit activity.</p>
+<h2>Demo Accounts</h2>
+<table><tr><th>Role</th><th>Email</th><th>Password</th></tr><tr><td>Admin</td><td>admin@agrilink.demo</td><td>Password123!</td></tr><tr><td>Farmer</td><td>farmer@agrilink.demo</td><td>Password123!</td></tr><tr><td>Buyer</td><td>buyer@agrilink.demo</td><td>Password123!</td></tr></table>
+<div class="footer"><span>AgriLink</span><span>11</span></div>
+</section>
+
+<section class="slide">
+<h1>12. Advantages and Future Scope</h1>
+<div class="grid"><div class="panel"><h2>Advantages</h2><ul><li>Direct farmer-to-buyer commerce</li><li>Transparent fees</li><li>Verified farmer profiles</li><li>Digital inventory and orders</li><li>Role-based access</li><li>Analytics and audit trails</li></ul></div><div class="panel"><h2>Future Enhancements</h2><ul><li>Online payment integration</li><li>Live delivery tracking</li><li>SMS and email notifications</li><li>Mobile application</li><li>AI-based price prediction</li><li>Weather and crop advisory</li><li>Cloud deployment</li></ul></div></div>
+<div class="footer"><span>AgriLink</span><span>12</span></div>
+</section>
+
+<section class="slide cover">
+<h1>Conclusion</h1>
+<p class="big">AgriLink is a full-stack agricultural marketplace that creates a direct digital bridge between farms and consumers.</p>
+<p class="big">It combines transparent pricing, verified users, inventory management, secure authentication, order tracking, and analytics in one platform.</p>
+<h2>Thank you</h2>
+</section>
+</body>
+</html>

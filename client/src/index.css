@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-cream: #FDFBF7;
+    --text-forest: #1E3F20;
+    --color-soil: #4E3629;
+    --color-leaf: #74A12E;
+  }
+
+  body {
+    background-color: #FDFBF7;
+    color: #1E3F20;
+    font-family: 'Noto Sans Tamil', 'Manrope', 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: #74A12E;
+    color: #FDFBF7;
+  }
+}
+
+/* Premium Tamil Typography */
+html[lang="ta"] body,
+html.font-tamil body,
+.font-tamil {
+  font-family: 'Noto Sans Tamil', 'Mukta Malar', 'Manrope', sans-serif !important;
+  letter-spacing: 0.012em;
+}
+
+html[lang="ta"] h1,
+html[lang="ta"] h2,
+html[lang="ta"] h3,
+html[lang="ta"] h4,
+html[lang="ta"] .font-display,
+.font-tamil-display {
+  font-family: 'Noto Sans Tamil', 'Mukta Malar', sans-serif !important;
+  font-weight: 700;
+  line-height: 1.38;
+}
+
+.font-display { font-family: 'Space Grotesk', 'Noto Sans Tamil', sans-serif; }
+.agri-landing { overflow: hidden; background: #FDFBF7; margin-top: -4.65rem; }
+.agri-page-enter { animation: agri-page-in .55s cubic-bezier(.2,.75,.2,1) both; }
+.agri-page-enter > * { animation: agri-content-rise .7s cubic-bezier(.2,.75,.2,1) both; }
+.agri-dashboard-shell { position: relative; isolation: isolate; }
+.agri-dashboard-shell::before { position: absolute; z-index: -1; inset: 1.25rem 0 1.25rem 1.5rem; border-radius: 1.5rem; background: radial-gradient(circle at 80% 10%, rgba(116,161,46,.16), transparent 34%), linear-gradient(135deg, rgba(78,54,41,.06), transparent 55%); content: ''; pointer-events: none; }
+.agri-card-depth { transform-style: preserve-3d; will-change: transform; }
+.agri-card-depth:hover { transform: translateY(-6px) rotateX(1deg) rotateY(-1deg); box-shadow: 0 18px 34px rgba(30,63,32,.12); }
+.agri-nav-sheen { background-image: linear-gradient(110deg, transparent 20%, rgba(116,161,46,.15) 45%, transparent 70%); background-size: 220% 100%; animation: agri-nav-glint 9s ease-in-out infinite; }
+.agri-loading-state { animation: agri-content-rise .5s ease-out both; }
+.agri-loading-state > div { box-shadow: 0 0 0 7px rgba(116,161,46,.14), 0 0 24px rgba(116,161,46,.28); }
+.agri-empty-state { animation: agri-content-rise .6s ease-out both; }
+@keyframes agri-page-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes agri-content-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes agri-nav-glint { 0%, 65%, 100% { background-position: 180% 0; } 78% { background-position: -20% 0; } }
+.agri-hero { position: relative; isolation: isolate; overflow: hidden; min-height: 100svh; background: radial-gradient(circle at 72% 42%, #2A5C34 0%, #1E3F20 46%, #122814 100%); color: white; }
+.agri-hero-canvas { position: absolute; inset: 0; z-index: 0; }
+.agri-hero-canvas canvas { display: block; width: 100%; height: 100%; }
+.agri-hero-veil { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(30,63,32,.88) 0%, rgba(30,63,32,.35) 52%, rgba(30,63,32,.10) 100%); pointer-events: none; }
+.agri-hero-grid { position: absolute; inset: 0; z-index: 1; opacity: .14; background-image: linear-gradient(rgba(116, 161, 46, .16) 1px, transparent 1px), linear-gradient(90deg, rgba(116, 161, 46, .16) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(to bottom, black, transparent 85%); pointer-events: none; }
+.agri-gradient-text { background: linear-gradient(120deg, #95CB41, #FDFBF7 45%, #E3D4CB); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.agri-hero-legend { position: relative; z-index: 2; display: grid; gap: .8rem; justify-items: end; }
+.agri-legend-card { display: flex; align-items: center; gap: .8rem; width: min(100%, 280px); border: 1px solid rgba(255,255,255,.14); border-radius: 1.1rem; background: rgba(30,63,32,.65); padding: .9rem 1rem; backdrop-filter: blur(18px); box-shadow: 0 18px 40px rgba(0,0,0,.26); }
+.agri-legend-card p { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(253,251,247,.6); }
+.agri-legend-card strong { display: block; margin-top: .15rem; font-family: 'Space Grotesk', sans-serif; font-size: .95rem; color: #FDFBF7; }
+.agri-legend-pulse { animation: agri-legend-glow 3.4s ease-in-out infinite; }
+.agri-scroll-hint { position: absolute; z-index: 3; bottom: 1.4rem; left: 50%; transform: translateX(-50%); font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(253,251,247,.5); }
+.agri-marquee { overflow: hidden; border-bottom: 1px solid rgba(78,54,41,.12); background: #1E3F20; color: #74A12E; }
+.agri-marquee-track { display: flex; width: max-content; animation: agri-marquee 28s linear infinite; }
+.agri-marquee-track span { display: inline-flex; align-items: center; gap: .55rem; padding: .9rem 1.8rem; font-family: 'DM Mono', monospace; font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; white-space: nowrap; }
+.agri-closing-band { position: relative; overflow: hidden; background: #1E3F20; }
+.agri-closing-orb { position: absolute; right: -6rem; top: -8rem; width: 22rem; height: 22rem; border-radius: 999px; background: rgba(116,161,46,.18); filter: blur(8px); }
+.agri-has-cursor, .agri-has-cursor * { cursor: none; }
+.agri-cursor, .agri-cursor-ring { position: fixed; top: 0; left: 0; z-index: 90; pointer-events: none; border-radius: 999px; }
+.agri-cursor { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: #74A12E; box-shadow: 0 0 12px rgba(116,161,46,.8); }
+.agri-cursor-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1px solid rgba(116,161,46,.8); transition: width .2s ease, height .2s ease, margin .2s ease, background .2s ease; }
+.agri-cursor-ring.is-hot { width: 52px; height: 52px; margin: -26px 0 0 -26px; background: rgba(116,161,46,.14); }
+.agri-nav-home { border-color: transparent !important; background: rgba(30,63,32,.55) !important; color: #FDFBF7; }
+.agri-about-hero { overflow: hidden; border-radius: 2rem; background: #1E3F20; color: #FDFBF7; padding: 3.5rem 2rem; text-align: center; border: 1px solid rgba(78,54,41,.2); }
+.agri-market-hero { position: relative; overflow: hidden; border-radius: 1.8rem; background: #1E3F20; color: #FDFBF7; padding: 2.2rem; border: 1px solid rgba(78,54,41,.2); }
+.agri-market-hero::after { position: absolute; right: -4rem; top: -5rem; width: 16rem; height: 16rem; border-radius: 999px; background: rgba(116,161,46,.18); content: ''; }
+@keyframes agri-legend-glow { 50% { box-shadow: 0 0 0 1px rgba(116,161,46,.3), 0 18px 40px rgba(0,0,0,.26); } }
+@keyframes agri-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.agri-reveal { animation: agri-rise .8s cubic-bezier(.2,.75,.2,1) both; }
+.agri-delay-1 { animation-delay: .08s; }.agri-delay-2 { animation-delay: .16s; }.agri-delay-3 { animation-delay: .24s; }.agri-delay-4 { animation-delay: .32s; }.agri-delay-5 { animation-delay: .4s; }
+@keyframes agri-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+.agri-primary-button, .agri-quiet-button { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; border-radius: 999px; padding: .9rem 1.25rem; font-size: .8rem; font-weight: 800; transition: transform .25s ease, background .25s ease, color .25s ease; }
+.agri-primary-button { background: #74A12E; color: #FDFBF7; box-shadow: 0 12px 30px rgba(116,161,46,.25); }
+.agri-primary-button:hover { transform: translateY(-3px); background: #84B535; }
+.agri-quiet-button { border: 1px solid rgba(253,251,247,.3); color: #FDFBF7; }
+.agri-quiet-button:hover { transform: translateY(-3px); background: rgba(253,251,247,.12); }
+.agri-proof-band { background: #74A12E; color: #1E3F20; }
+.agri-kicker { font-family: 'DM Mono', monospace; font-size: .65rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #74A12E; }
+.agri-text-link { display: inline-flex; align-items: center; gap: .35rem; color: #74A12E; font-size: .78rem; font-weight: 800; }
+.agri-text-link:hover { color: #5C8223; }
+
+/* Custom scrollbar with The Fertile Ground Palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4ECE0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CDB4A6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4E3629;
+}
